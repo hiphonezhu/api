@@ -9,6 +9,7 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
 
+    <!-- mybatis 拦截器 -->
     <plugins>
         <plugin interceptor="com.java.api.jdbc.paging.MySQLPagingInterceptor">
             <property name="paging" value="Paging"/>

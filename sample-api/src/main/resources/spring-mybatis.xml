@@ -7,23 +7,29 @@
        http://www.springframework.org/schema/tx
        http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+    <!-- mybatis 配置: dataSource 为 spring.xml 中的 BasicDataSource -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis.xml"/>
+        <!-- mapper 文件创建位置 -->
         <property name="mapperLocations" value="classpath:com/xxx/sample/api/mapper/*.xml"/>
+        <!-- 自动设置别名 -->
         <property name="typeAliasesPackage" value="com.xxx.sample.api.result"/>
     </bean>
 
+    <!--通过模板定制 mybatis 的行为 -->
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
 
+    <!-- 配置事务 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-
+    <!-- 配置基于注解的事务 aop -->
     <tx:annotation-driven/>
 
+    <!-- 配置 DAO -->
     <bean id="dataAccessor" class="com.java.api.jdbc.dao.impl.DefaultDataAccessor">
         <property name="sqlSession" ref="sqlSession"/>
     </bean>

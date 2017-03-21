@@ -44,6 +44,14 @@ public class AdvertiserService {
         return advertiserResult;
     }
 
+    /**
+     * @Transactional: Spring 事务注解
+     * 1、只能用在 public 方法上且不会被继承；
+     * 2、默认只会在遇到运行时异常才回滚，比如 NullPointException，遇到 IOException 之类必须捕获的异常不会回滚事务。
+     * @param advertiserId
+     * @param advertiserName
+     * @param description
+     */
     @Transactional
     public void updateAdvertiser(String advertiserId, String advertiserName, String description) {
         Map<String, Object> paramMap = new HashMap<String, Object>();
