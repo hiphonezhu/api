@@ -5,7 +5,7 @@
 
 <mapper namespace="AdvertiserMapper">
 
-    <!--<cache type="com.xxx.jdbc.cache.RedisCache"/>-->
+    <!--<cache type="com.java.api.jdbc.cache.RedisCache"/>-->
 
     <select id="selectAdvertiserPaging" resultType="AdvertiserResult">
         SELECT id, advertiser_name, description, created_time FROM advertiser

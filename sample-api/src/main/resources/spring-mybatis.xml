@@ -24,10 +24,10 @@
 
     <tx:annotation-driven/>
 
-    <bean id="dataAccessor" class="com.xxx.api.jdbc.dao.impl.DefaultDataAccessor">
+    <bean id="dataAccessor" class="com.java.api.jdbc.dao.impl.DefaultDataAccessor">
         <property name="sqlSession" ref="sqlSession"/>
     </bean>
 
-    <bean id="idGenerator" class="com.xxx.api.jdbc.id.impl.DefaultIdGenerator"/>
+    <bean id="idGenerator" class="com.java.api.jdbc.id.impl.DefaultIdGenerator"/>
 
 </beans>

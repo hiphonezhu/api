@@ -54,7 +54,7 @@
         </dependency>
         <!-- API Framework -->
         <dependency>
-            <groupId>com.xxx.api</groupId>
+            <groupId>com.java.api</groupId>
             <artifactId>api-framework</artifactId>
             <version>1.0.0</version>
         </dependency>

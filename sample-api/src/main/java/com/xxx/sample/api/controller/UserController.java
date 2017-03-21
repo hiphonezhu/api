@@ -1,8 +1,8 @@
 package com.xxx.sample.api.controller;
 
-import com.xxx.api.bean.Response;
-import com.xxx.api.security.IgnoreSecurity;
-import com.xxx.api.security.TokenManager;
+import com.java.api.bean.Response;
+import com.java.api.security.IgnoreSecurity;
+import com.java.api.security.TokenManager;
 import com.xxx.sample.api.bean.UserBean;
 import com.xxx.sample.api.param.LoginParam;
 import com.xxx.sample.api.service.UserService;

@@ -27,7 +27,7 @@
         <property name="testOnReturn" value="${jdbc.test_on_return}"/>
     </bean>
 
-    <bean id="jedisPool" class="com.xxx.api.redis.JedisPoolFactoryBean">
+    <bean id="jedisPool" class="com.java.api.redis.JedisPoolFactoryBean">
         <property name="host" value="${redis.host}"/>
         <property name="port" value="${redis.port}"/>
         <property name="password" value="${redis.password}"/>

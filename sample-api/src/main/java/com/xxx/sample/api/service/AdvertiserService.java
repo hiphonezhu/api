@@ -1,10 +1,10 @@
 package com.xxx.sample.api.service;
 
-import com.xxx.api.jdbc.ServiceException;
-import com.xxx.api.jdbc.dao.DataAccessor;
-import com.xxx.api.jdbc.id.IdGenerator;
-import com.xxx.api.jdbc.paging.Paging;
-import com.xxx.api.util.DateUtil;
+import com.java.api.jdbc.ServiceException;
+import com.java.api.jdbc.dao.DataAccessor;
+import com.java.api.jdbc.id.IdGenerator;
+import com.java.api.jdbc.paging.Paging;
+import com.java.api.util.DateUtil;
 import com.xxx.sample.api.constant.Message;
 import com.xxx.sample.api.result.AdvertiserResult;
 import org.springframework.beans.factory.annotation.Autowired;

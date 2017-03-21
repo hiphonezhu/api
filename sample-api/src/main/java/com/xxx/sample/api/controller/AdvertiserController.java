@@ -1,9 +1,9 @@
 package com.xxx.sample.api.controller;
 
-import com.xxx.api.bean.PagingParam;
-import com.xxx.api.bean.PagingResult;
-import com.xxx.api.bean.Response;
-import com.xxx.api.jdbc.paging.Paging;
+import com.java.api.bean.PagingParam;
+import com.java.api.bean.PagingResult;
+import com.java.api.bean.Response;
+import com.java.api.jdbc.paging.Paging;
 import com.xxx.sample.api.param.AdvertiserParam;
 import com.xxx.sample.api.result.AdvertiserResult;
 import com.xxx.sample.api.service.AdvertiserService;

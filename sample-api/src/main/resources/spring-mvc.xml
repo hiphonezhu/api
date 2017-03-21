@@ -14,10 +14,10 @@
        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 自动扫描 @Component、@Service、@Controller、@Repository这四种注解的类，注册为bean -->
-    <context:component-scan base-package="com.xxx.api.advice"/>
+    <context:component-scan base-package="com.java.api.advice"/>
     <context:component-scan base-package="com.xxx.sample.api.controller"/>
 
-    <bean id="objectMapper" class="com.xxx.api.json.CustomObjectMapper" init-method="init">
+    <bean id="objectMapper" class="com.java.api.json.CustomObjectMapper" init-method="init">
         <property name="camelCaseToLowerCaseWithUnderscores" value="true"/>
         <property name="dateFormatPattern" value="yyyy-MM-dd HH:mm:ss"/>
     </bean>
@@ -37,7 +37,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
-            <bean id="securityInterceptor" class="com.xxx.api.security.SecurityInterceptor">
+            <bean id="securityInterceptor" class="com.java.api.security.SecurityInterceptor">
                 <property name="tokenManager" ref="tokenManager"/>
                 <property name="tokenName" value="X-Token"/>
             </bean>
@@ -46,15 +46,15 @@
 
     <bean class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor"/>
 
-    <bean id="tokenManager" class="com.xxx.api.security.impl.DefaultTokenManager"/>
-    <!--<bean id="tokenManager" class="com.xxx.security.impl.RedisTokenManager">
+    <bean id="tokenManager" class="com.java.api.security.impl.DefaultTokenManager"/>
+    <!--<bean id="tokenManager" class="com.java.api.security.impl.RedisTokenManager">
         <property name="jedisPool" ref="jedisPool"/>
         <property name="database" value="15"/>
         <property name="seconds" value="3600"/>
     </bean>-->
 
     <!-- AspectJ start-->
-    <bean id="securityAspect" class="com.xxx.api.security.SecurityAspect">
+    <bean id="securityAspect" class="com.java.api.security.SecurityAspect">
         <property name="tokenManager" ref="tokenManager"/>
         <property name="tokenName" value="X-Token"/>
     </bean>

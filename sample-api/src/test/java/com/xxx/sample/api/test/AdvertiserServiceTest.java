@@ -1,6 +1,6 @@
 package com.xxx.sample.api.test;
 
-import com.xxx.api.jdbc.paging.Paging;
+import com.java.api.jdbc.paging.Paging;
 import com.xxx.sample.api.result.AdvertiserResult;
 import com.xxx.sample.api.service.AdvertiserService;
 import org.junit.Assert;

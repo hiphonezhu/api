@@ -1,6 +1,6 @@
 package com.xxx.sample.api.param;
 
-import com.xxx.api.validation.NotEmpty;
+import com.java.api.validation.NotEmpty;
 
 /**
  * 登录参数对象
