@@ -134,7 +134,9 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>${tomcat7-maven-plugin.version}</version>
                 <configuration>
-                    <path>/</path>
+                    <username>admin</username>
+                    <password>123456</password>
+                    <path>/sample-web</path>
                     <port>8082</port>
                 </configuration>
             </plugin>
